@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/registerPage_topHeight"
+        android:background="@color/mainPage_top_color">
+
+        <TextView
+            android:id="@+id/mineSetting_cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/uploadRecord_topBar_patientImage_toRight"
+            android:drawableLeft="@mipmap/goback_image"
+            android:drawablePadding="@dimen/mineSetting_cancelButton_dis"
+            android:gravity="center_vertical"
+            android:text="@string/mineInformation_page_cancelText"
+            android:textColor="@color/uploadRecord_topTextColor"
+            android:textSize="@dimen/uploadRecord_topBar_backButton_textSize" />
+
+        <TextView
+            android:id="@+id/mineInformation_topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mineSetting_page_topText"
+            android:textColor="@color/uploadRecord_topTextColor"
+            android:textSize="@dimen/uploadRecord_topBar_patientName_textSize" />
+
+    </RelativeLayout>
+
+    <com.sjaiwl.app.tools.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:layout_marginTop="@dimen/minePage_userInfo_toLeftDis"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <RelativeLayout
+                android:id="@+id/mineSetting_editPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mainPage_top_height"
+                android:background="@drawable/minepage_bar_selector"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/minePage_userInfo_toLeftDis"
+                    android:text="@string/mineSetting_page_passwordText"
+                    android:textSize="@dimen/minePage_userInfo_barTextSize" />
+
+                <ImageView
+                    android:id="@+id/mineInformation_userName_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
+                    android:background="@mipmap/my_jiantou" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:layout_marginTop="@dimen/minePage_userInfo_toLeftDis"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mainPage_top_height"
+                android:background="@color/minePage_userInfo_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/minePage_userInfo_toLeftDis"
+                    android:text="@string/mineSetting_page_upload"
+                    android:textSize="@dimen/minePage_userInfo_barTextSize" />
+
+                <com.sjaiwl.app.tools.ToggleButton
+                    android:id="@+id/mineSetting_uploadToggle"
+                    android:layout_width="@dimen/mineSetting_toggleButton_width"
+                    android:layout_height="@dimen/mineSetting_toggleButton_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"></com.sjaiwl.app.tools.ToggleButton>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mainPage_top_height"
+                android:background="@color/minePage_userInfo_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/minePage_userInfo_toLeftDis"
+                    android:text="@string/mineSetting_page_view"
+                    android:textSize="@dimen/minePage_userInfo_barTextSize" />
+
+                <com.sjaiwl.app.tools.ToggleButton
+                    android:id="@+id/mineSetting_viewToggle"
+                    android:layout_width="@dimen/mineSetting_toggleButton_width"
+                    android:layout_height="@dimen/mineSetting_toggleButton_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"></com.sjaiwl.app.tools.ToggleButton>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:layout_marginTop="@dimen/minePage_userInfo_toLeftDis"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <RelativeLayout
+                android:id="@+id/mineSetting_cacheButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mainPage_top_height"
+                android:background="@drawable/minepage_bar_selector"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/minePage_userInfo_toLeftDis"
+                    android:text="@string/mineSetting_page_cache"
+                    android:textSize="@dimen/minePage_userInfo_barTextSize" />
+
+                <ImageView
+                    android:id="@+id/mineSetting_cacheButton_rightButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
+                    android:background="@mipmap/my_jiantou" />
+
+                <TextView
+                    android:id="@+id/mineSetting_cacheButton_cacheSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userPhoto_toTopDis"
+                    android:layout_toLeftOf="@id/mineSetting_cacheButton_rightButton"
+                    android:text="@string/mineSetting_page_cache" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:layout_marginTop="@dimen/minePage_userInfo_toLeftDis"
+                android:background="@color/filePage_tabHost_gap_color" />
+
+            <RelativeLayout
+                android:id="@+id/mineSetting_aboutButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/mainPage_top_height"
+                android:background="@drawable/minepage_bar_selector"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/minePage_userInfo_toLeftDis"
+                    android:text="@string/mineSetting_page_about"
+                    android:textSize="@dimen/minePage_userInfo_barTextSize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
+                    android:background="@mipmap/my_jiantou" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/filePage_tabHost_below_gap"
+                android:background="@color/filePage_tabHost_gap_color" />
+        </LinearLayout>
+    </com.sjaiwl.app.tools.MyScrollView>
+</LinearLayout>

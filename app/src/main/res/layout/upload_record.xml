@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/uploadRecord_topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/uploadRecord_topBar_Height"
+        android:background="@color/mainPage_top_color">
+
+        <TextView
+            android:id="@+id/uploadRecord_backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/uploadRecord_topBar_patientImage_toRight"
+            android:drawableLeft="@mipmap/goback_image"
+            android:drawablePadding="@dimen/mineSetting_cancelButton_dis"
+            android:gravity="center_vertical"
+            android:text="@string/uploadRecord_goBackText"
+            android:textColor="@color/uploadRecord_topTextColor"
+            android:textSize="@dimen/uploadRecord_topBar_backButton_textSize" />
+
+        <TextView
+            android:id="@+id/uploadRecord_patientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/uploadRecord_patientName"
+            android:textColor="@color/uploadRecord_topTextColor"
+            android:textSize="@dimen/uploadRecord_topBar_patientName_textSize" />
+
+        <com.sjaiwl.app.tools.CircularLoginImage
+            android:id="@+id/uploadRecord_patientImage"
+            android:layout_width="@dimen/uploadRecord_topBar_patientImageSize"
+            android:layout_height="@dimen/uploadRecord_topBar_patientImageSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/uploadRecord_topBar_patientImage_toRight"
+            android:background="@mipmap/userphoto" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/uploadRecord_selectBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/uploadRecord_bottomBarColor"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/uploadRecord_bottomBarColor">
+
+            <TextView
+                android:id="@+id/uploadRecord_bottomAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/uploadRecord_bottomBar_toLeft"
+                android:background="@mipmap/chat_bottom_add" />
+
+            <EditText
+                android:id="@+id/uploadRecord_bottomEditBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/uploadRecord_topBar_patientImage_toRight"
+                android:layout_marginLeft="@dimen/uploadRecord_bottomBar_toLeft"
+                android:layout_marginRight="@dimen/uploadRecord_bottomBar_toLeft"
+                android:layout_marginTop="@dimen/uploadRecord_topBar_patientImage_toRight"
+                android:layout_toLeftOf="@id/uploadRecord_bottomAdd"
+                android:background="@drawable/edit_fillet_shape"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:padding="@dimen/uploadRecord_bottomBar_editText_padding" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/uploadRecord_selectSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uploadRecord_selectBar_toTopHeight"
+            android:layout_marginBottom="@dimen/uploadRecord_selectBar_toTopHeight"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/uploadRecord_typeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/uploadRecord_typeImage_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/chat_bottom_gallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/uploadRecord_typeImage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadRecord_typePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/uploadRecord_typePhoto_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/chat_bottom_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/uploadRecord_typePhoto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadRecord_typeVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/uploadRecord_typeVideo_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/chat_bottom_video" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/uploadRecord_TypeVideo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uploadRecord_typeAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/uploadRecord_typeAudio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/chat_bottom_audio" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/uploadRecord_TypeAudio" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.sjaiwl.app.tools.PullToLoadMoreListView
+        android:id="@+id/uploadRecord_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/uploadRecord_selectBar"
+        android:layout_below="@id/uploadRecord_topBar"
+        android:divider="@null"
+        android:dividerHeight="@dimen/uploadRecord_listView_dividerHeight"
+        android:transcriptMode="normal"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:stackFromBottom="false"></com.sjaiwl.app.tools.PullToLoadMoreListView>
+</RelativeLayout>
