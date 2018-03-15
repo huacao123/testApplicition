@@ -1,5 +1,5 @@
 # MedicalApplicition
-湘雅医疗数据 （基于android平台医疗数据采集系统)
+基于android平台医疗数据采集系统
 
 [Download APK](https://github.com/sjaiwl/image_folder/blob/master/MedicalApplication.apk)
 
