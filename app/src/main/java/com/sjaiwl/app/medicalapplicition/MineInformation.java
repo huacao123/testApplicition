@@ -116,7 +116,7 @@ public class MineInformation extends Activity implements View.OnClickListener {
             userPhoto.setImageUrl(UserInfo.user.getDoctor_url(), 2);
         }
         setTextFunction(userName, UserInfo.user.getDoctor_name());
-        setTextFunction(userSex, UserInfo.user.getDoctor_gender());
+        setTextFunction(userSex, UserInfo.user.getDoctor_url());
         setTextFunction(userBirthday, UserInfo.user.getDoctor_birthday());
         setTextFunction(userDepartment, UserInfo.user.getDoctor_department());
         setTextFunction(userJob, UserInfo.user.getDoctor_job());

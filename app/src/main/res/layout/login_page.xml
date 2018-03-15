@@ -117,7 +117,8 @@
             android:layout_marginLeft="@dimen/login_page_left"
             android:textColor="@color/login_forget_color"
             android:layout_above="@+id/login_blankView"
-            android:text="@string/login_page_forgetpass" />
+            android:text="@string/login_page_forgetpass"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/login_register"

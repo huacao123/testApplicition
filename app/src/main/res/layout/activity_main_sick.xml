@@ -1,17 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainSickActivity">
 
     <fragment
-        android:id="@+id/fragment_main"
-        android:name="com.sjaiwl.app.fragment.FragmentMain"
+        android:id="@+id/fragment_file"
+        android:name="com.sjaiwl.app.fragment.FragmentFile"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"
-        tools:layout="@layout/main_page" />
+        tools:layout="@layout/file_page" />
 
     <fragment
         android:id="@+id/fragment_mine"
@@ -27,24 +28,24 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/bottom_main"
+            android:id="@+id/bottom_file"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/fragment_bottom_height"
             android:orientation="vertical"
-            android:background="@color/fragment_bottom_pressed_color"
             android:layout_weight="@integer/fragment_bottom_weight"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@color/fragment_bottom_pressed_color">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/main_icon" />
+                android:background="@mipmap/file_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/fragment_bottom_gap"
-                android:text="@string/fragment_bottom_main"
+                android:text="@string/fragment_bottom_file"
                 android:textColor="@color/fragment_bottom_textColor"
                 android:textSize="@dimen/fragment_bottom_textSize" />
         </LinearLayout>
