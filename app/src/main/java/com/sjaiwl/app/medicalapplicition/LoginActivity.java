@@ -141,7 +141,7 @@ public class LoginActivity extends Activity {
                 if (classes.equals("doctor")){
                     intent = new Intent(LoginActivity.this, MainActivity.class);
                 }else {
-                    intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent = new Intent(LoginActivity.this, MainSickActivity.class);
                 }
 
                 startActivityForResult(intent, REQUEST_CODE_FOR_LOGIN);
