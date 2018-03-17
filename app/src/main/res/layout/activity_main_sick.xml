@@ -7,6 +7,14 @@
     tools:context=".MainSickActivity">
 
     <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.sjaiwl.app.fragment.FragmentHome"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="@integer/fragment_content_weight"
+        tools:layout="@layout/home_page" />
+
+    <fragment
         android:id="@+id/fragment_file"
         android:name="com.sjaiwl.app.fragment.FragmentFile"
         android:layout_width="fill_parent"
@@ -28,13 +36,36 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/bottom_home"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fragment_bottom_height"
+            android:orientation="vertical"
+            android:background="@color/fragment_bottom_pressed_color"
+            android:layout_weight="@integer/fragment_bottom_weight"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/main_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_bottom_gap"
+                android:text="@string/fragment_bottom_main"
+                android:textColor="@color/fragment_bottom_textColor"
+                android:textSize="@dimen/fragment_bottom_textSize" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/bottom_file"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/fragment_bottom_height"
             android:orientation="vertical"
             android:layout_weight="@integer/fragment_bottom_weight"
             android:gravity="center"
-            android:background="@color/fragment_bottom_pressed_color">
+            android:background="@drawable/fragment_bottom_selector">
 
             <ImageView
                 android:layout_width="wrap_content"

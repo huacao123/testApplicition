@@ -65,8 +65,8 @@ public class LoginActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login_page);
 
-        startActivity(new Intent(this, StartupActivity.class));
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        //startActivity(new Intent(this, StartupActivity.class));
+        //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
         initView();
         initData();

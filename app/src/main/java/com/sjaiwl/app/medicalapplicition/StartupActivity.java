@@ -1,5 +1,6 @@
 package com.sjaiwl.app.medicalapplicition;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,8 @@ public class StartupActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                finish();
+                //finish();
+                startActivity(new Intent(StartupActivity.this, LoginActivity.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
 
