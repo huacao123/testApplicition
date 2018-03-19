@@ -9,6 +9,8 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
+import com.example.wendy.utils.ExitApplication;
+
 import java.util.Random;
 
 /**
@@ -28,6 +30,7 @@ public class StartupActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_startup);
         initImage();
+        ExitApplication.getInstance().addActivity(this);
 
     }
 

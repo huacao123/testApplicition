@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wendy.function.AppConfiguration;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.smart.SmartImageView;
 import com.example.wendy.utils.SelectPopupWindow;
 import com.example.wendy.utils.UploadDialog;

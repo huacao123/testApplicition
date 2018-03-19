@@ -3,9 +3,7 @@ package com.example.wendy.thehealthsystem;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.DatePicker;
@@ -17,8 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wendy.function.UsedTools;
-import com.example.wendy.function.UserInfo;
-import com.example.wendy.sqlite.MyDBHelper;
+import com.example.wendy.sqlitebean.UserInfo;
+
+import org.litepal.crud.DataSupport;
 
 import java.util.Calendar;
 
@@ -44,7 +43,7 @@ public class UpdateInformation extends Activity {
     private String birthday = "";
     private String successResponse = null;
 
-    private String personId;
+    private long personId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class UpdateInformation extends Activity {
         initView();
         getUpdateType();
         initData();
-        personId = UserInfo.user.doctor_id.toString();
+
     }
 
     private void initView() {
@@ -109,7 +108,7 @@ public class UpdateInformation extends Activity {
                 updateBirthday.setVisibility(View.VISIBLE);
                 initViewForBirthday();
                 break;
-            case "updateDepartment":
+/*            case "updateDepartment":
                 topText.setText("科室");
                 updateName.setVisibility(View.VISIBLE);
                 if (UserInfo.user.getDoctor_department() != null) {
@@ -124,7 +123,7 @@ public class UpdateInformation extends Activity {
                     inputText.setText(UserInfo.user.getDoctor_job());
                     inputText.requestFocus(UserInfo.user.getDoctor_job().length());
                 }
-                break;
+                break;*/
             case "updateTelephone":
                 topText.setText("电话");
                 updateName.setVisibility(View.VISIBLE);
@@ -192,7 +191,7 @@ public class UpdateInformation extends Activity {
                     break;
                 }
                 if (UserInfo.user.getDoctor_name() == null || !(inputText.getText().toString().trim().equals(UserInfo.user.getDoctor_name()))) {
-                    updatePersonData("username", inputText.getText().toString().trim());
+                    updatePersonData("doctor_name", inputText.getText().toString().trim());
                 }
                 break;
             case "updateSex":
@@ -201,16 +200,16 @@ public class UpdateInformation extends Activity {
                     break;
                 }
                 if ((UserInfo.user.getDoctor_url() == null || !(UserInfo.user.getDoctor_url().equals(gender)))) {
-                    updatePersonData("classes", gender);
+                    updatePersonData("doctor_gender", gender);
 
                 }
                 break;
             case "updateBirthday":
                 if (UserInfo.user.getDoctor_birthday() == null || !(UserInfo.user.getDoctor_birthday().equals(birthday))) {
-                    updatePersonData("birthday", birthday);
+                    updatePersonData("doctor_birthday", birthday);
                 }
                 break;
-            case "updateDepartment":
+/*            case "updateDepartment":
                 if (inputText.getText().toString().trim().isEmpty()) {
                     Toast.makeText(this, "请输入科室！", Toast.LENGTH_SHORT).show();
                     break;
@@ -219,8 +218,8 @@ public class UpdateInformation extends Activity {
                     updatePersonData("department", inputText.getText().toString().trim());
                 }
 
-                break;
-            case "updateJob":
+                break;*/
+/*            case "updateJob":
                 if (inputText.getText().toString().trim().isEmpty()) {
                     Toast.makeText(this, "请输入职务！", Toast.LENGTH_SHORT).show();
                     break;
@@ -229,7 +228,7 @@ public class UpdateInformation extends Activity {
                     updatePersonData("job", inputText.getText().toString().trim());
                 }
 
-                break;
+                break;*/
             case "updateTelephone":
                 if (inputText.getText().toString().trim().isEmpty()) {
                     Toast.makeText(this, "请输入电话！", Toast.LENGTH_SHORT).show();
@@ -240,7 +239,7 @@ public class UpdateInformation extends Activity {
                     break;
                 }
                 if (UserInfo.user.getDoctor_telephone() == null || !(inputText.getText().toString().trim().equals(UserInfo.user.getDoctor_telephone()))) {
-                    updatePersonData("telephone", inputText.getText().toString().trim());
+                    updatePersonData("doctor_telephone", inputText.getText().toString().trim());
                 }
                 break;
             default:
@@ -251,7 +250,12 @@ public class UpdateInformation extends Activity {
 
     public void updatePersonData(final String type,final String value) {
 
-        MyDBHelper myDBHelper = new MyDBHelper(this, "APP_Login.db", null, 1);
+        personId = UserInfo.user.id;
+        ContentValues values = new ContentValues();
+        values.put(type, value);
+        DataSupport.update(UserInfo.class, values, personId);
+
+      /*  MyDBHelper myDBHelper = new MyDBHelper(this, "APP_Login.db", null, 1);
         SQLiteDatabase database = myDBHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(type,value);
@@ -259,7 +263,7 @@ public class UpdateInformation extends Activity {
         database.update("person", values,"personid=?", new String[]{personId});
         database.close();
         afterPostData(type,value);
-        Toast.makeText(UpdateInformation.this, "修改成功", Toast.LENGTH_LONG).show();
+        Toast.makeText(UpdateInformation.this, "修改成功", Toast.LENGTH_LONG).show();*/
 
     }
 

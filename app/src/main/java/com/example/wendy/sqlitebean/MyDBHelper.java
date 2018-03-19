@@ -1,4 +1,4 @@
-package com.example.wendy.sqlite;
+package com.example.wendy.sqlitebean;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

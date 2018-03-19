@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.wendy.function.UsedTools;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.utils.ToggleButton;
 
 import java.io.File;

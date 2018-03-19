@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -23,15 +22,17 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.example.wendy.function.AppConfiguration;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.smart.WebImageCache;
-import com.example.wendy.sqlite.MyDBHelper;
+import com.example.wendy.sqlitebean.MyDBHelper;
 import com.example.wendy.utils.ExitApplication;
 import com.example.wendy.utils.UploadDialog;
 
 import org.json.JSONObject;
+import org.litepal.crud.DataSupport;
 
 import java.util.HashMap;
+import java.util.List;
 
 
 /**
@@ -57,6 +58,8 @@ public class LoginActivity extends Activity {
     private Dialog dialog;
     private static boolean isShowNetWorkState;
 
+    private long exitTime = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +72,8 @@ public class LoginActivity extends Activity {
         initView();
         initData();
         ExitApplication.getInstance().addActivity(this);
+
+
     }
 
 
@@ -179,12 +184,26 @@ public class LoginActivity extends Activity {
     }
 
     public boolean isCorrect() {
-        String dbUserName;
+        List<UserInfo> allUserInfo = DataSupport.findAll(UserInfo.class);
+        for(int i=0 ; i<allUserInfo.size();i++){
+            if (allUserInfo.get(i).getDoctor_name().equals(username.getText().toString())
+                    && allUserInfo.get(i).getDoctor_password().equals(password.getText().toString())){
+                userInfo = new UserInfo(allUserInfo.get(i).getDoctor_name(),allUserInfo.get(i).getDoctor_password(),allUserInfo.get(i).getDoctor_url());
+                UserInfo.setUserInfo(userInfo);
+                classes = allUserInfo.get(i).getDoctor_url();
+                return true;
+            }
+        }
+        Toast.makeText(this, "账号或密码错误，请重新输入", Toast.LENGTH_LONG).show();
+        return false;
+
+        /*String dbUserName;
         String dbPassword;
         String dbClasses;
         Integer dbPersonid;
         myDBHelper = new MyDBHelper(this, "APP_Login.db", null, 1);
         database = myDBHelper.getWritableDatabase();
+        //SQLiteDatabase db = Connector.getDatabase();
 
         Cursor cursor = database.query("person", null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
@@ -197,8 +216,8 @@ public class LoginActivity extends Activity {
 
                 if (dbUserName.equals(username.getText().toString()) &&
                         dbPassword.equals(password.getText().toString())) {
-                    userInfo = new UserInfo(dbUserName,dbPassword,dbClasses,dbPersonid);
-                    UserInfo.setUserInfo(userInfo);
+               //     userInfo = new UserInfo(dbUserName,dbPassword,dbClasses,dbPersonid);
+               //     UserInfo.setUserInfo(userInfo);
                     classes = dbClasses;
                     return true;
                 }
@@ -206,46 +225,7 @@ public class LoginActivity extends Activity {
         }
         cursor.close();
         Toast.makeText(this, "账号或密码错误，请重新输入", Toast.LENGTH_LONG).show();
-        return false;
-    }
-
-    private void postData() {
-        HashMap<String, String> map = new HashMap<String, String>();
-        map.put("doctor_name", username.getText().toString().trim());
-        map.put("doctor_password", password.getText().toString().trim());
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        JSONObject jsonObject = new JSONObject(map);
-        String url = AppConfiguration.loginUrl;
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
-                new Response.Listener<JSONObject>() {
-                    @SuppressLint("ShowToast")
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Gson gson = new Gson();
-                        userInfo = gson.fromJson(response.toString(), UserInfo.class);
-                        if (userInfo != null && userInfo.getDoctor_name() != null) {
-                            UserInfo.setUserInfo(userInfo);
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivityForResult(intent, REQUEST_CODE_FOR_LOGIN);
-                        } else {
-                            if (dialog != null && dialog.isShowing()) {
-                                dialog.dismiss();
-                            }
-                            Toast.makeText(LoginActivity.this, "用户名或密码不正确", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @SuppressLint("ShowToast")
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        if (dialog != null && dialog.isShowing()) {
-                            dialog.dismiss();
-                        }
-                        Toast.makeText(LoginActivity.this, "网络访问异常", Toast.LENGTH_SHORT).show();
-                    }
-                });
-        requestQueue.add(jsonRequest);
+        return false;*/
     }
 
     private boolean checkData() {
@@ -272,5 +252,16 @@ public class LoginActivity extends Activity {
             finish();
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(LoginActivity.this, "再按一次退出应用", Toast.LENGTH_SHORT)
+                    .show();
+            exitTime = System.currentTimeMillis();
+            return;
+        }
+        ExitApplication.getInstance().exit();
     }
 }

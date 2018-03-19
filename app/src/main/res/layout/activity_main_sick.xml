@@ -7,12 +7,12 @@
     tools:context=".MainSickActivity">
 
     <fragment
-        android:id="@+id/fragment_home"
-        android:name="com.example.wendy.fragment.FragmentHome"
+        android:id="@+id/fragment_sick"
+        android:name="com.example.wendy.fragment.FragmentSick"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"
-        tools:layout="@layout/home_page" />
+        tools:layout="@layout/sick_page" />
 
     <fragment
         android:id="@+id/fragment_file"

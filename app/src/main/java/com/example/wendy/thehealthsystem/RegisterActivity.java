@@ -1,7 +1,7 @@
 package com.example.wendy.thehealthsystem;
 
 import android.app.Activity;
-import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.wendy.sqlite.MyDBHelper;
+import com.example.wendy.sqlitebean.UserInfo;
+import com.example.wendy.sqlitebean.MyDBHelper;
 
 /**
  * Created by sjaiwl on 15/3/28.
@@ -98,7 +99,7 @@ public class RegisterActivity extends Activity {
     }
 
     public void insertData() {
-
+/*
         myDBHelper = new MyDBHelper(this, "APP_Login.db", null, 1);
         database = myDBHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -107,7 +108,25 @@ public class RegisterActivity extends Activity {
         contentValues.put("password", userPass.getText().toString());
         database.insert("person", null, contentValues);
         Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+*/
 
+        UserInfo userInfo = new UserInfo();
+        userInfo.setDoctor_name(userName.getText().toString());
+        userInfo.setDoctor_password(userPass.getText().toString());
+        userInfo.setDoctor_url(classes);
+        userInfo.save();
+        if(userInfo.save()){
+            Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+        }else {
+            Toast.makeText(RegisterActivity.this, "注册失败", Toast.LENGTH_LONG).show();
+        }
+
+        /*BloodGlucoseValue bloodGlucoseValue = new BloodGlucoseValue();
+        bloodGlucoseValue.setBgvalue("100");
+        bloodGlucoseValue.save();
+        userInfo.setBloodGlucoseValue(bloodGlucoseValue);
+        userInfo.save();*/
 
     }
 

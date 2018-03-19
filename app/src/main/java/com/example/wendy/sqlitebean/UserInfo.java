@@ -1,13 +1,15 @@
-package com.example.wendy.function;
+package com.example.wendy.sqlitebean;
 
-import java.io.Serializable;
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by sjaiwl on 15/3/19.
  */
-public class UserInfo implements Serializable {
+public class UserInfo extends DataSupport{
+    private BloodGlucoseValue bloodGlucoseValue;
+
     public static UserInfo user = null;
-    public Integer doctor_id;
+    public Integer id;
     public String doctor_name;
     public String doctor_url;
     public String doctor_password;
@@ -17,12 +19,23 @@ public class UserInfo implements Serializable {
     public String doctor_department;
     public String doctor_telephone;
 
-    public UserInfo(String name,String password,String url,Integer id){
+    public UserInfo(){
+        super();
+    }
+
+    public UserInfo(String name,String password,String url){
         super();
         this.doctor_name = name;
         this.doctor_password = password;
         this.doctor_url = url;
-        this.doctor_id = id;
+    }
+
+    public BloodGlucoseValue getBloodGlucoseValue() {
+        return bloodGlucoseValue;
+    }
+
+    public void setBloodGlucoseValue(BloodGlucoseValue bloodGlucoseValue) {
+        this.bloodGlucoseValue = bloodGlucoseValue;
     }
 
     public static void setUserInfo(UserInfo u) {
@@ -41,11 +54,11 @@ public class UserInfo implements Serializable {
     }
 
     public Integer getDoctor_id() {
-        return doctor_id;
+        return id;
     }
 
-    public void setDoctor_id(Integer doctor_id) {
-        this.doctor_id = doctor_id;
+    public void setDoctor_id(Integer id) {
+        this.id = id;
     }
 
     public String getDoctor_name() {
@@ -119,7 +132,7 @@ public class UserInfo implements Serializable {
     @Override
     public String toString() {
         return "UserInfo{" +
-                "doctor_id=" + doctor_id +
+                "doctor_id=" + id +
                 ", doctor_name='" + doctor_name + '\'' +
                 ", doctor_url='" + doctor_url + '\'' +
                 ", doctor_password='" + doctor_password + '\'' +

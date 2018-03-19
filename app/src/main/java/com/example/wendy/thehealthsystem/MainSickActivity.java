@@ -33,7 +33,7 @@ public class MainSickActivity extends FragmentActivity {
         setContentView(R.layout.activity_main_sick);
         mFragments = new Fragment[3];
         fragmentManager = getSupportFragmentManager();
-        mFragments[0] = fragmentManager.findFragmentById(R.id.fragment_home);
+        mFragments[0] = fragmentManager.findFragmentById(R.id.fragment_sick);
         mFragments[1] = fragmentManager.findFragmentById(R.id.fragment_file);
         mFragments[2] = fragmentManager.findFragmentById(R.id.fragment_mine);
         fragmentTransaction = fragmentManager.beginTransaction()

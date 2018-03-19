@@ -12,7 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.smart.WebImageCache;
 import com.example.wendy.utils.BitmapUtil;
 import com.example.wendy.utils.DragImageView;

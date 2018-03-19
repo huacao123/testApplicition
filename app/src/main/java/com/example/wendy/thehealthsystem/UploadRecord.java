@@ -53,7 +53,7 @@ import com.example.wendy.function.NetworkUtils;
 import com.example.wendy.function.PatientInfo;
 import com.example.wendy.function.ResourceInfo;
 import com.example.wendy.function.UsedTools;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.interFace.AddNewAudioUploadHelp;
 import com.example.wendy.interFace.IndexListItemClickHelp;
 import com.example.wendy.utils.CircularLoginImage;

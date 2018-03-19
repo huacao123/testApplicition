@@ -36,7 +36,7 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.example.wendy.function.NetworkUtils;
 import com.example.wendy.function.ResourceInfo;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.zoom.PhotoView;
 
 import java.io.File;

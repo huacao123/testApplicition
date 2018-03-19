@@ -136,7 +136,7 @@
     <string name="mineInformation_page_topText">个人信息</string>
     <string name="mineInformation_page_cancelText">我</string>
     <string name="mineInformation_page_userPhoto">头像</string>
-    <string name="mineInformation_page_userSex">性别</string>
+    <string name="mineInformation_page_userSex">类别</string>
     <string name="mineInformation_page_userBirthday">出生日期</string>
     <string name="mineInformation_page_userJob">职务</string>
     <string name="mineInformation_page_userDepartment">科室</string>

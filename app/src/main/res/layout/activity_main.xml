@@ -7,11 +7,11 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.example.wendy.fragment.FragmentHome"
+        android:name="com.example.wendy.fragment.FragmentDoctor"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"
-        tools:layout="@layout/home_page" />
+        tools:layout="@layout/doctor_page" />
 
     <fragment
         android:id="@+id/fragment_main"

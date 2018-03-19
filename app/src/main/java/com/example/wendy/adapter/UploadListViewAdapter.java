@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.wendy.function.AppConfiguration;
 import com.example.wendy.function.ResourceInfo;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.interFace.IndexListItemClickHelp;
 import com.example.wendy.thehealthsystem.R;
 import com.example.wendy.smart.SmartImageView;

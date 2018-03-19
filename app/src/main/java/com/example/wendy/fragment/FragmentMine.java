@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.thehealthsystem.LoginActivity;
 import com.example.wendy.thehealthsystem.MineInformation;
 import com.example.wendy.thehealthsystem.MineSetting;

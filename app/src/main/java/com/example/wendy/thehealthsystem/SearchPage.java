@@ -25,7 +25,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.wendy.adapter.SearchResultAdapter;
 import com.example.wendy.function.AppConfiguration;
 import com.example.wendy.function.PatientInfo;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 
 import org.json.JSONArray;
 

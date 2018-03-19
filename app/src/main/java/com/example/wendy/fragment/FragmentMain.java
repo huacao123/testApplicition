@@ -25,7 +25,7 @@ import com.example.wendy.function.AppConfiguration;
 import com.example.wendy.function.PatientInfo;
 import com.example.wendy.function.RecordTypeSelect;
 import com.example.wendy.function.UsedTools;
-import com.example.wendy.function.UserInfo;
+import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.interFace.IndexListItemClickHelp;
 import com.example.wendy.thehealthsystem.PatientDetails;
 import com.example.wendy.thehealthsystem.R;
