@@ -31,7 +31,7 @@
                 android:textSize="@dimen/filePage_listItem_deleteText"
                 android:visibility="gone" />
 
-            <com.sjaiwl.app.smart.SmartImageView
+            <com.example.wendy.smart.SmartImageView
                 android:id="@+id/filePage_listItem_patientImage"
                 android:layout_toRightOf="@id/filePage_listItem_delete"
                 android:layout_width="@dimen/filePage_listItem_smartImage"

@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/filePage_listItem_height">
 
-            <com.sjaiwl.app.tools.CircularLoginImage
+            <com.example.wendy.utils.CircularLoginImage
                 android:id="@+id/searchPage_listItem_patientImage"
                 android:layout_toRightOf="@id/filePage_listItem_delete"
                 android:layout_width="@dimen/filePage_listItem_smartImage"

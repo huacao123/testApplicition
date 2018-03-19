@@ -57,11 +57,11 @@
         android:layout_height="@dimen/filePage_tabHost_below_gap"
         android:background="@color/filePage_tabHost_gap_color" />
 
-    <com.sjaiwl.app.xlistview.XListView
+    <com.example.wendy.xlistview.XListView
         android:id="@+id/mainPage_listView"
         android:divider="@color/mainPage_listItem_gap"
         android:dividerHeight="@dimen/mainPage_listItem_imageDistance"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.sjaiwl.app.xlistview.XListView>
+        android:layout_height="match_parent"></com.example.wendy.xlistview.XListView>
 
 </LinearLayout>

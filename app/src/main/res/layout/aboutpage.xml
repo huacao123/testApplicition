@@ -30,7 +30,7 @@
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <com.sjaiwl.app.tools.MyScrollView
+    <com.example.wendy.utils.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -130,5 +130,5 @@
                 android:layout_height="@dimen/filePage_tabHost_below_gap"
                 android:background="@color/filePage_tabHost_gap_color" />
         </LinearLayout>
-    </com.sjaiwl.app.tools.MyScrollView>
+    </com.example.wendy.utils.MyScrollView>
 </LinearLayout>

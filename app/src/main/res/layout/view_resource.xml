@@ -23,13 +23,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.sjaiwl.app.zoom.PhotoView
+        <com.example.wendy.zoom.PhotoView
             android:id="@+id/viewResource_gallery"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:background="@color/upload_listItem_textColor"
-            android:visibility="gone"></com.sjaiwl.app.zoom.PhotoView>
+            android:visibility="gone"></com.example.wendy.zoom.PhotoView>
 
         <FrameLayout
             android:layout_centerInParent="true"

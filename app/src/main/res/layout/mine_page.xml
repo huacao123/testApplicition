@@ -19,7 +19,7 @@
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <com.sjaiwl.app.tools.MyScrollView
+    <com.example.wendy.utils.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -34,7 +34,7 @@
                 android:layout_marginTop="@dimen/minePage_userPhoto_topSize"
                 android:background="@color/minePage_userInfo_background">
 
-                <com.sjaiwl.app.tools.CircularLoginImage
+                <com.example.wendy.utils.CircularLoginImage
                     android:id="@+id/minePage_userPhoto"
                     android:layout_width="@dimen/minePage_userPhoto_size"
                     android:layout_height="@dimen/minePage_userPhoto_size"
@@ -149,5 +149,5 @@
                     android:layout_centerInParent="true" />
             </RelativeLayout>
         </LinearLayout>
-    </com.sjaiwl.app.tools.MyScrollView>
+    </com.example.wendy.utils.MyScrollView>
 </LinearLayout>

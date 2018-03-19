@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.sjaiwl.app.tools.CircularLoginImage
+        <com.example.wendy.utils.CircularLoginImage
             android:id="@+id/upload_userImage"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
@@ -46,7 +46,7 @@
                 android:textSize="@dimen/upload_listItem_textSize"
                 android:visibility="gone" />
 
-            <com.sjaiwl.app.smart.SmartImageView
+            <com.example.wendy.smart.SmartImageView
                 android:id="@+id/upload_imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

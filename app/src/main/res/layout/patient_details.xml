@@ -32,7 +32,7 @@
             android:text="@string/patientDetails_patientName" />
     </RelativeLayout>
 
-    <com.sjaiwl.app.tools.MyScrollView
+    <com.example.wendy.utils.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -186,7 +186,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <com.sjaiwl.app.smart.SmartImageView
+                <com.example.wendy.smart.SmartImageView
                     android:id="@+id/patientDetails_patientImage"
                     android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
                     android:layout_centerVertical="true"
@@ -316,5 +316,5 @@
                     android:textSize="@dimen/mineInformation_userTextSize" />
             </LinearLayout>
         </LinearLayout>
-    </com.sjaiwl.app.tools.MyScrollView>
+    </com.example.wendy.utils.MyScrollView>
 </LinearLayout>

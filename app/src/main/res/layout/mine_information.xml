@@ -33,7 +33,7 @@
 
     </RelativeLayout>
 
-    <com.sjaiwl.app.tools.MyScrollView
+    <com.example.wendy.utils.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -68,7 +68,7 @@
                     android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
                     android:background="@mipmap/my_jiantou" />
 
-                <com.sjaiwl.app.smart.SmartImageView
+                <com.example.wendy.smart.SmartImageView
                     android:id="@+id/mineInformation_userPhoto_realPhoto"
                     android:layout_toLeftOf="@id/mineInformation_userPhoto_arrow"
                     android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis"
@@ -329,5 +329,5 @@
                     android:layout_marginRight="@dimen/minePage_userInfo_toLeftDis" />
             </RelativeLayout>
         </LinearLayout>
-    </com.sjaiwl.app.tools.MyScrollView>
+    </com.example.wendy.utils.MyScrollView>
 </LinearLayout>

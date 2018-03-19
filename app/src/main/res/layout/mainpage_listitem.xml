@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/mainPage_listItem_height">
 
-        <com.sjaiwl.app.tools.CircularLoginImage
+        <com.example.wendy.utils.CircularLoginImage
             android:id="@+id/mainPage_listItem_patientImage"
             android:layout_width="@dimen/mainPage_circleImage_radius"
             android:layout_height="@dimen/mainPage_circleImage_radius"

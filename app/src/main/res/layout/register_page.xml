@@ -32,7 +32,7 @@
             android:text="@string/registerPage_topText" />
     </RelativeLayout>
 
-    <com.sjaiwl.app.tools.MyScrollView
+    <com.example.wendy.utils.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -232,5 +232,5 @@
 
             </RelativeLayout>
         </LinearLayout>
-    </com.sjaiwl.app.tools.MyScrollView>
+    </com.example.wendy.utils.MyScrollView>
 </LinearLayout>

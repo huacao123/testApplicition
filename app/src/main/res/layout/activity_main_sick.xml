@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.sjaiwl.app.fragment.FragmentHome"
+        android:name="com.example.wendy.fragment.FragmentHome"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/fragment_file"
-        android:name="com.sjaiwl.app.fragment.FragmentFile"
+        android:name="com.example.wendy.fragment.FragmentFile"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/fragment_mine"
-        android:name="com.sjaiwl.app.fragment.FragmentMine"
+        android:name="com.example.wendy.fragment.FragmentMine"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="@integer/fragment_content_weight"

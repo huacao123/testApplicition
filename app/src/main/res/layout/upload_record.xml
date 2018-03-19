@@ -31,7 +31,7 @@
             android:textColor="@color/uploadRecord_topTextColor"
             android:textSize="@dimen/uploadRecord_topBar_patientName_textSize" />
 
-        <com.sjaiwl.app.tools.CircularLoginImage
+        <com.example.wendy.utils.CircularLoginImage
             android:id="@+id/uploadRecord_patientImage"
             android:layout_width="@dimen/uploadRecord_topBar_patientImageSize"
             android:layout_height="@dimen/uploadRecord_topBar_patientImageSize"
@@ -176,7 +176,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.sjaiwl.app.tools.PullToLoadMoreListView
+    <com.example.wendy.utils.PullToLoadMoreListView
         android:id="@+id/uploadRecord_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -190,5 +190,5 @@
         android:headerDividersEnabled="false"
         android:smoothScrollbar="true"
         android:scrollbarStyle="outsideOverlay"
-        android:stackFromBottom="false"></com.sjaiwl.app.tools.PullToLoadMoreListView>
+        android:stackFromBottom="false"></com.example.wendy.utils.PullToLoadMoreListView>
 </RelativeLayout>
