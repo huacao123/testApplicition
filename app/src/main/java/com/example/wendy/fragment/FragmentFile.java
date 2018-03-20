@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.example.wendy.thehealthsystem.R;
-import com.example.wendy.thehealthsystem.SickAddDataActivity;
+import com.example.wendy.thehealthsystem.SickDataActivity;
 import com.example.wendy.thehealthsystem.SickChartActivity;
 import com.example.wendy.thehealthsystem.SickMedicalRecordActivity;
 
@@ -48,7 +48,7 @@ public class FragmentFile extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_addData:
-                startActivity(new Intent(getActivity(), SickAddDataActivity.class));
+                startActivity(new Intent(getActivity(), SickDataActivity.class));
                 break;
 
             case R.id.btn_chart:

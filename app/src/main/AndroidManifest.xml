@@ -127,9 +127,10 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="adjustPan" />
 
-        <activity android:name=".SickAddDataActivity"></activity>
+        <activity android:name=".SickDataActivity"></activity>
         <activity android:name=".SickChartActivity"></activity>
         <activity android:name=".SickMedicalRecordActivity"></activity>
+        <activity android:name=".AddDataActivity"></activity>
 
     </application>
 

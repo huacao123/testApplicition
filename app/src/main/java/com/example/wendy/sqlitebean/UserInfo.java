@@ -2,14 +2,17 @@ package com.example.wendy.sqlitebean;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by sjaiwl on 15/3/19.
  */
 public class UserInfo extends DataSupport{
-    private BloodGlucoseValue bloodGlucoseValue;
+    private List<BloodGlucoseValue> mBGlucoseValue = new ArrayList<>();
 
     public static UserInfo user = null;
-    public Integer id;
+    public Integer doctor_id;
     public String doctor_name;
     public String doctor_url;
     public String doctor_password;
@@ -23,19 +26,20 @@ public class UserInfo extends DataSupport{
         super();
     }
 
-    public UserInfo(String name,String password,String url){
+    public UserInfo(Integer id,String name,String password,String url){
         super();
+        this.doctor_id = id;
         this.doctor_name = name;
         this.doctor_password = password;
         this.doctor_url = url;
     }
 
-    public BloodGlucoseValue getBloodGlucoseValue() {
-        return bloodGlucoseValue;
+    public List<BloodGlucoseValue> getmBGlucoseValue() {
+        return mBGlucoseValue;
     }
 
-    public void setBloodGlucoseValue(BloodGlucoseValue bloodGlucoseValue) {
-        this.bloodGlucoseValue = bloodGlucoseValue;
+    public void setmBGlucoseValue(List<BloodGlucoseValue> mBGlucoseValue) {
+        this.mBGlucoseValue = mBGlucoseValue;
     }
 
     public static void setUserInfo(UserInfo u) {
@@ -54,11 +58,11 @@ public class UserInfo extends DataSupport{
     }
 
     public Integer getDoctor_id() {
-        return id;
+        return doctor_id;
     }
 
     public void setDoctor_id(Integer id) {
-        this.id = id;
+        this.doctor_id = id;
     }
 
     public String getDoctor_name() {
@@ -132,7 +136,7 @@ public class UserInfo extends DataSupport{
     @Override
     public String toString() {
         return "UserInfo{" +
-                "doctor_id=" + id +
+                "doctor_id=" + doctor_id +
                 ", doctor_name='" + doctor_name + '\'' +
                 ", doctor_url='" + doctor_url + '\'' +
                 ", doctor_password='" + doctor_password + '\'' +

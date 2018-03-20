@@ -188,7 +188,7 @@ public class LoginActivity extends Activity {
         for(int i=0 ; i<allUserInfo.size();i++){
             if (allUserInfo.get(i).getDoctor_name().equals(username.getText().toString())
                     && allUserInfo.get(i).getDoctor_password().equals(password.getText().toString())){
-                userInfo = new UserInfo(allUserInfo.get(i).getDoctor_name(),allUserInfo.get(i).getDoctor_password(),allUserInfo.get(i).getDoctor_url());
+                userInfo = new UserInfo(i,allUserInfo.get(i).getDoctor_name(),allUserInfo.get(i).getDoctor_password(),allUserInfo.get(i).getDoctor_url());
                 UserInfo.setUserInfo(userInfo);
                 classes = allUserInfo.get(i).getDoctor_url();
                 return true;

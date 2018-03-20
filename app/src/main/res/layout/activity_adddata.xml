@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mainPage_top_height"
+        android:background="@color/mainPage_top_color">
+
+        <TextView
+            android:id="@+id/filePage_topName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filePage_top_text"
+            android:textColor="@color/mainPage_searchBox_color"
+            android:textSize="@dimen/mainPage_top_textSize"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="@color/mainPage_searchBox_color"
+            android:textSize="@dimen/mainPage_search_textSize"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/filePage_editButton_distance" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="@color/mainPage_searchBox_color"
+            android:textSize="@dimen/mainPage_search_textSize"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/filePage_editButton_distance" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期"/>
+
+
+        <EditText
+            android:id="@+id/et_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间段"/>
+
+        <RadioGroup
+            android:id="@+id/rg_timeSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="午餐前"/>
+            <RadioButton
+                android:id="@+id/rb_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="午餐后"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="血糖值"/>
+        <EditText
+            android:id="@+id/et_boldGlucoseLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">医疗数据采集系统</string>
+    <string name="app_name">健康血糖系统</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <!-- login page -->
@@ -41,7 +41,7 @@
 
     <!-- filePage -->
     <string name="filePage_top_text">文件</string>
-    <string name="filePage_right_text">编辑</string>
+    <string name="filePage_right_text">添加</string>
     <string name="filePage_tabHost_allText">全部</string>
     <string name="filePage_tabHost_wordText">文档</string>
     <string name="filePage_tabHost_imageText">图片</string>

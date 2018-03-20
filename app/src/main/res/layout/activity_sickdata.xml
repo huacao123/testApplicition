@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/mainPage_top_height"
+        android:background="@color/mainPage_top_color">
+
+        <TextView
+            android:id="@+id/filePage_topName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filePage_top_text"
+            android:textColor="@color/mainPage_searchBox_color"
+            android:textSize="@dimen/mainPage_top_textSize"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_addData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/filePage_right_text"
+            android:textColor="@color/mainPage_searchBox_color"
+            android:textSize="@dimen/mainPage_search_textSize"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/filePage_editButton_distance" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_myDataList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+
+
+</LinearLayout>

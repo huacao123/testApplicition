@@ -99,7 +99,7 @@ public class UpdateInformation extends Activity {
                 }
                 break;
             case "updateSex":
-                topText.setText("性别");
+                topText.setText("类别");
                 updateSex.setVisibility(View.VISIBLE);
                 initViewForSex();
                 break;
@@ -200,7 +200,7 @@ public class UpdateInformation extends Activity {
                     break;
                 }
                 if ((UserInfo.user.getDoctor_url() == null || !(UserInfo.user.getDoctor_url().equals(gender)))) {
-                    updatePersonData("doctor_gender", gender);
+                    updatePersonData("doctor_url", gender);
 
                 }
                 break;
@@ -250,10 +250,12 @@ public class UpdateInformation extends Activity {
 
     public void updatePersonData(final String type,final String value) {
 
-        personId = UserInfo.user.id;
+        personId = UserInfo.user.doctor_id;
         ContentValues values = new ContentValues();
         values.put(type, value);
         DataSupport.update(UserInfo.class, values, personId);
+        afterPostData(type,value);
+        Toast.makeText(UpdateInformation.this, "修改成功", Toast.LENGTH_LONG).show();
 
       /*  MyDBHelper myDBHelper = new MyDBHelper(this, "APP_Login.db", null, 1);
         SQLiteDatabase database = myDBHelper.getWritableDatabase();
@@ -306,7 +308,7 @@ public class UpdateInformation extends Activity {
 
     private void afterPostData(String type, String value) {
         switch (type) {
-            case "username":
+            case "doctor_name":
                 UserInfo.user.setDoctor_name(value);
                 SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCE_NAME, Activity.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -314,23 +316,23 @@ public class UpdateInformation extends Activity {
                 editor.commit();
                 finish();
                 break;
-            case "classes":
+            case "doctor_url":
                 UserInfo.user.setDoctor_gender(value);
                 finish();
                 break;
-            case "birthday":
+            case "doctor_birthday":
                 UserInfo.user.setDoctor_birthday(value);
                 finish();
                 break;
-            case "department":
+/*            case "department":
                 UserInfo.user.setDoctor_department(value);
                 finish();
                 break;
             case "job":
                 UserInfo.user.setDoctor_job(value);
                 finish();
-                break;
-            case "telephone":
+                break;*/
+            case "doctor_telephone":
                 UserInfo.user.setDoctor_telephone(value);
                 finish();
                 break;
