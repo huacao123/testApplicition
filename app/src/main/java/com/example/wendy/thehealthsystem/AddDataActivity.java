@@ -1,20 +1,25 @@
 package com.example.wendy.thehealthsystem;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wendy.sqlitebean.BloodGlucoseValue;
 import com.example.wendy.sqlitebean.UserInfo;
+
+import org.litepal.crud.DataSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,14 +30,14 @@ import java.util.List;
 
 public class AddDataActivity extends AppCompatActivity implements View.OnClickListener{
 
-
     private EditText et_date;
     private RadioGroup rg_timeSelect;
     private EditText et_boldGlucoseLevel;
     private TextView tv_ensure;
     private TextView tv_cancel;
-    private String timeSelect;
-    private Integer[] data = new Integer[3];
+    private String timeSelect = "午餐前";
+    private int[] data = new int[3] ;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,7 @@ public class AddDataActivity extends AppCompatActivity implements View.OnClickLi
                         data[1] = datePicker.getMonth()+1;
                         data[2] = datePicker.getDayOfMonth();
                         et_date.setText(data[0]+"-"+data[1]+"-"+data[2]);
+
                     }
                 }).create().show();
             }
@@ -87,12 +93,22 @@ public class AddDataActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tv_ensure:
-                List<BloodGlucoseValue> bloodGlucoseValue = new ArrayList<>();
-                bloodGlucoseValue.get(UserInfo.user.getDoctor_id()).setBoldGlucoseLevelValue(
+                BloodGlucoseValue bloodGlucoseValue = new BloodGlucoseValue();
+
+                bloodGlucoseValue.setBoldGlucoseLevelValue(
                         et_boldGlucoseLevel.getText().toString());
-                bloodGlucoseValue.get(UserInfo.user.getDoctor_id()).setTime(timeSelect);
-                bloodGlucoseValue.get(UserInfo.user.getDoctor_id()).setData(data);
-                UserInfo.user.setmBGlucoseValue(bloodGlucoseValue);
+                bloodGlucoseValue.setTimeSelect(timeSelect);
+                bloodGlucoseValue.setYear(data[0]);
+                bloodGlucoseValue.setMouth(data[1]);
+                bloodGlucoseValue.setDay(data[2]);
+                bloodGlucoseValue.save();
+
+                UserInfo userInfo = DataSupport.find(UserInfo.class,UserInfo.user.doctor_id,true);
+                userInfo.getmBGValueList().add(bloodGlucoseValue);
+                userInfo.save();
+
+                startActivity(new Intent(this,SickDataActivity.class));
+                Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tv_cancel:
                 finish();

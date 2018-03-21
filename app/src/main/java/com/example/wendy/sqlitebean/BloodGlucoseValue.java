@@ -14,8 +14,17 @@ public class BloodGlucoseValue extends DataSupport{
     private int id;
     private String timeSelect;
     private String boldGlucoseLevelValue;
-    Integer[] data  = new Integer[3];
+    private int year ;
+    private int mouth;
+    private int day;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public UserInfo getUserInfo() {
         return userInfo;
@@ -25,22 +34,37 @@ public class BloodGlucoseValue extends DataSupport{
         this.userInfo = userInfo;
     }
 
-    public Integer[] getData() {
-        return data;
+    public int getYear() {
+        return year;
     }
 
-    public void setData(Integer[] data) {
-        this.data[0] =data[0];
-        this.data[1] =data[1];
-        this.data[2] =data[2];
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public String getTime() {
+    public int getMouth() {
+        return mouth;
+    }
+
+    public void setMouth(int mouth) {
+        this.mouth = mouth;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+
+    public String getTimeSelect() {
         return timeSelect;
     }
 
-    public void setTime(String time) {
-        this.timeSelect = time;
+    public void setTimeSelect(String timeSelect) {
+        this.timeSelect = timeSelect;
     }
 
     public String getBoldGlucoseLevelValue() {

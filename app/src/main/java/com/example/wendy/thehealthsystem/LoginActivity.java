@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
@@ -188,7 +189,8 @@ public class LoginActivity extends Activity {
         for(int i=0 ; i<allUserInfo.size();i++){
             if (allUserInfo.get(i).getDoctor_name().equals(username.getText().toString())
                     && allUserInfo.get(i).getDoctor_password().equals(password.getText().toString())){
-                userInfo = new UserInfo(i,allUserInfo.get(i).getDoctor_name(),allUserInfo.get(i).getDoctor_password(),allUserInfo.get(i).getDoctor_url());
+                Log.d("wenfang","setDoctor_id"+allUserInfo.get(i).getId());
+                userInfo = new UserInfo(allUserInfo.get(i).getId(),allUserInfo.get(i).getDoctor_name(),allUserInfo.get(i).getDoctor_password(),allUserInfo.get(i).getDoctor_url());
                 UserInfo.setUserInfo(userInfo);
                 classes = allUserInfo.get(i).getDoctor_url();
                 return true;

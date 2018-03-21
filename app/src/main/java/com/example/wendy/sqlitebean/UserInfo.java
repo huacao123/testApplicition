@@ -9,18 +9,21 @@ import java.util.List;
  * Created by sjaiwl on 15/3/19.
  */
 public class UserInfo extends DataSupport{
-    private List<BloodGlucoseValue> mBGlucoseValue = new ArrayList<>();
+    private List<BloodGlucoseValue> mBGValueList = new ArrayList<>();
 
     public static UserInfo user = null;
+
+    private int id;
+
     public Integer doctor_id;
-    public String doctor_name;
-    public String doctor_url;
-    public String doctor_password;
-    public String doctor_gender;
-    public String doctor_birthday;
-    public String doctor_job;
-    public String doctor_department;
-    public String doctor_telephone;
+    private String doctor_name;
+    private String doctor_url;
+    private String doctor_password;
+    private String doctor_gender;
+    private String doctor_birthday;
+    private String doctor_job;
+    private String doctor_department;
+    private String doctor_telephone;
 
     public UserInfo(){
         super();
@@ -34,12 +37,20 @@ public class UserInfo extends DataSupport{
         this.doctor_url = url;
     }
 
-    public List<BloodGlucoseValue> getmBGlucoseValue() {
-        return mBGlucoseValue;
+    public List<BloodGlucoseValue> getmBGValueList() {
+        return mBGValueList;
     }
 
-    public void setmBGlucoseValue(List<BloodGlucoseValue> mBGlucoseValue) {
-        this.mBGlucoseValue = mBGlucoseValue;
+    public void setmBGValueList(List<BloodGlucoseValue> mBGlucoseValue) {
+        this.mBGValueList = mBGlucoseValue;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public static void setUserInfo(UserInfo u) {
