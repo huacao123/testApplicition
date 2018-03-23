@@ -49,13 +49,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
@@ -63,6 +56,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
@@ -71,13 +71,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java/2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
@@ -85,6 +78,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
@@ -106,38 +106,43 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\armeabi.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\SMSSDK-1.1.9.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\mframework.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\android-async-http-1.4.6.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\x86.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\SMSSDK-1.1.9.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="org.apache.httpcomponents:httpcore:4.4.2@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-media-compat-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\gson-2.1-javadoc.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\armeabi.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\xUtils-2.6.14.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\gson-2.1-sources.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:common:1.0.0@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\volley.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\x86.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\volley.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\gson-2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\litepal-1.6.1-src.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="cn.bmob.android:bmob-sms:1.0.1@jar" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\mframework.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\gson-2.1-javadoc.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:26.1.0@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\litepal-1.6.1-src.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-utils-26.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\android-async-http-1.4.6.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\x86_64.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\armeabi-v7a.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\gson-2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\x86_64.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\mips64.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="cn.bmob.android:http-legacy:1.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-compat-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\mips64.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\xUtils-2.6.14.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\universal-image-loader-1.9.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\universal-image-loader-1.9.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="cn.bmob.android:bmob-sdk-3.5.5" level="project" />
+    <orderEntry type="library" name="cn.bmob.android:bmob-im-2.0.5" level="project" />
+    <orderEntry type="library" name="cn.bmob.android:bmob-push:0.8@jar" level="project" />
     <orderEntry type="library" name="android.arch.core:common:1.0.0@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\mips.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\fastjson.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-v4-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\armeabi-v7a.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\mips.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.1.0" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\fastjson.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\gson-2.1-sources.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="__local_aars__:Y.\workplace\TheHealthSystem\app\libs\arm64-v8a.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="__local_aars__:Z.\workplace\TheHealthSystem\app\libs\arm64-v8a.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="org.apache.http.legacy-android-26" level="project" />
   </component>
 </module>

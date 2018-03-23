@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.example.wendy.sqlitebean.UserInfo;
 import com.example.wendy.sqlitebean.MyDBHelper;
 
+import cn.bmob.v3.Bmob;
+
 /**
  * Created by sjaiwl on 15/3/28.
  */
@@ -47,6 +49,7 @@ public class RegisterActivity extends Activity {
         setContentView(R.layout.register_page);
         initView();
         initData();
+        Bmob.initialize(this,"Your Application ID");
     }
 
     private void initView() {
